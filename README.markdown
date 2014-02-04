@@ -10,6 +10,7 @@ Optimize (lossless compress) images (jpeg, png, gif) using external utilities:
 * [optipng](http://optipng.sourceforge.net/)
 * [pngcrush](http://pmt.sourceforge.net/pngcrush/)
 * [pngout](http://www.advsys.net/ken/util/pngout.htm)
+* [pngquant](http://pngquant.org/)
 
 Based on [ImageOptim.app](http://imageoptim.com/).
 
@@ -55,13 +56,13 @@ Besides permanently setting environment variables in `~/.profile`, `~/.bash_prof
 ### Linux - Debian/Ubuntu
 
 ```bash
-sudo apt-get install -y advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush
+sudo apt-get install -y advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush pngquant
 ```
 
 ### Linux - RHEL/Fedora/Centos
 
 ```bash
-sudo yum install -y advancecomp gifsicle jhead libjpeg optipng
+sudo yum install -y advancecomp gifsicle jhead libjpeg optipng pngquant
 ```
 
 You will also need to install `jpegoptim` and `pngcrush` from source:
@@ -207,6 +208,9 @@ Worker can be disabled by passing false instead of options hash.
 
 ### advpng
 * `:level` — Compression level: 0 - don't compress, 1 - fast, 2 - normal, 3 - extra, 4 - extreme *(defaults to 4)*
+
+### pngquant
+* `:speed` —  Speed/quality trade-off: 1 - brute-force, 10 - fastest *(defaults to 3)*
 
 ### jpegoptim
 * `:strip` — List of extra markers to strip: comments, exif, iptc, icc or all *(defaults to all)*
